@@ -1,26 +1,57 @@
-# image2url
+# Image2URL
 
-transfer local image to url
+A Python tool to convert local images to URLs using Imgur API.
 
-# 如何取得 Imgur Client ID 的詳細步驟：
+## Description
 
-1. 註冊 Imgur 帳號
-   前往 https://imgur.com/
-   點擊右上角的 "Sign up" 註冊新帳號（如果已有帳號就直接登入）
+Image2URL is a simple tool that helps you:
+- Upload local images to Imgur
+- Get permanent URLs for your images
+- Process multiple images in a folder
+- Handle various image formats (jpg, jpeg, png, gif, bmp)
 
-2. 註冊 API 應用程式
-   登入後前往 https://api.imgur.com/oauth2/addclient
-   填寫應用程式資訊：
+## Installation
 
-Application name(應用程式名稱): 自訂一個名稱，例如 "My LINE Bot"
-Authorization type: 選擇 "OAuth 2 authorization without a callback URL"
-Email: 填寫你的電子郵件
-Description(描述): 簡單描述你的應用用途
-勾選 "I am not a robot" 驗證碼
+1. Clone this repository
+2. Install required packages:
+    ```bash
+    pip install requests pillow
+    ```
+3. Setup Imgur Client ID and Local Image Folder Path
 
-3. 取得 Client ID
-   註冊完成後，你會看到兩個重要的資訊：
-   Client ID(客戶端 ID)
-   Client Secret(客戶端密鑰)
-   我們只需要 Client ID, 把它複製下來
-   將 Client ID 放入程式碼
+## Register Imgur Account
+
+1. Go to [Imgur](https://imgur.com/)
+2. Click "Sign up" in the top right corner (or login if you already have an account)
+
+## Register API Application
+
+1. After login, go to [Imgur API](https://api.imgur.com/oauth2/addclient)
+2. Fill in application information:
+    - **Application name:** Choose a name (e.g., "Image2URL")
+    - **Authorization type:** Select "OAuth 2 authorization without a callback URL"
+    - **Email:** Your email address
+    - **Description:** Brief description of your application
+3. Check "I am not a robot"
+
+## Get Client ID
+
+1. After registration, you'll receive:
+    - **Client ID**
+    - **Client Secret**
+2. Copy the Client ID (we only need this)
+
+## Usage
+
+1. Put your images in a folder
+2. Update the script with your Imgur Client ID:
+    ```python
+    IMGUR_CLIENT_ID = "your_client_id_here"
+    ```
+3. Run the script:
+    ```bash
+    python image2url.py
+    ```
+
+## Example Output
+![Sample Image](https://i.imgur.com/ao7jcS3.jpeg)
