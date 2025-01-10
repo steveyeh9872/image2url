@@ -44,11 +44,15 @@ Image2URL is a simple tool that helps you:
 ## Usage
 
 1. Put your images in a folder
-2. Update the script with your Imgur Client ID:
+2. Update the script with your folder path:
+    ```python
+    FOLDER_PATH = "your_folder_path_here"
+    ```
+3. Update the script with your Imgur Client ID:
     ```python
     IMGUR_CLIENT_ID = "your_client_id_here"
     ```
-3. Run the script:
+4. Run the script:
     ```bash
     python image2url.py
     ```
